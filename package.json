@@ -1,0 +1,35 @@
+{
+  "name": "rn-echarts",
+  "version": "1.0.0",
+  "description": "Baidu echarts for React Native",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxeg/rn-echarts.git"
+  },
+  "keywords": [
+    "chart",
+    "echarts",
+    "rn"
+  ],
+  "files": [
+    "src",
+    "index.js",
+    "index.d.ts"
+  ],
+  "dependencies": {
+    "eventemitter3": "^2.0.3"
+  },
+  "author": "marvin.lgj@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dxeg/rn-echarts/issues"
+  },
+  "homepage": "https://github.com/dxeg/rn-echarts#readme"
+}
