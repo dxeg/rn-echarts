@@ -1,12 +1,12 @@
-# rn-echarts
+# rn-bd-echarts
 Baidu echarts for React Native
 
 ## Installation
 
 ```bash
-$ npm install --save rn-echarts
+$ npm install --save rn-bd-echarts
 or
-$ yarn add rn-echarts
+$ yarn add rn-bd-echarts
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ $ yarn add rn-echarts
     support `formatter: '{b}: {c}'`
     not support `formatter: function(){}`
 **/
-import RNECharts from 'rn-echarts';
+import RNECharts from 'rn-bd-echarts';
 class ChartTest extends Component{
     render(){
         return (
