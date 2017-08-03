@@ -12,7 +12,8 @@ export default class RNECharts extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (JSON.stringify(nextProps.option) !== JSON.stringify(this.props.option)) {
-            this.setOption(this.props.option)
+            this.clear();
+            this.setOption(nextProps.option);
         }
     }
 

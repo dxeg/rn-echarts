@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import {View, Button, Alert} from 'react-native';
 
-import RNEcharts from 'rn-echarts'
+import RNEcharts from 'rn-bd-echarts'
 
 const option = () => {
     return {
