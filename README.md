@@ -9,6 +9,43 @@ or
 $ yarn add rn-bd-echarts
 ```
 
+## Automatic Install
+
+`react-native link rn-bd-echarts`
+
+## Manual Install
+
+### `Android`
+
+1. Add the following lines to `android/settings.gradle`:
+    ```gradle
+    include ':rn-bd-echarts'
+    project(':rn-bd-echarts').projectDir = new File(settingsDir, '../node_modules/rn-bd-echarts/android')
+    ```
+
+2. Add the compile line to the dependencies in `android/app/build.gradle`:
+    ```gradle
+    dependencies {
+        ...
+        compile project(':rn-bd-echarts')
+    }
+    ```
+
+3. Add the import and link the package in `MainApplication.java`:
+    ```java
+    import com.rnbdecharts.RnBdEchartsPackage; // <-- add this import
+
+    public class MainApplication extends Application implements ReactApplication {
+        @Override
+        protected List<ReactPackage> getPackages() {
+            return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+                new RnBdEchartsPackage() // <-- add this line
+            );
+        }
+    }
+    ```
+
 ## Usage
 ```js
 /**
