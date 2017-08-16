@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {WebView, View} from 'react-native';
+import React, { Component } from 'react';
+import { WebView, View, Platform } from 'react-native';
 import EventEmitter from 'eventemitter3';
 
 
@@ -80,13 +80,22 @@ export default class RNECharts extends Component {
     }
 
     render() {
+
+        let _source = null;
+
+        if(Platform.OS === 'ios'){
+            _source = require('./ChartHtml/chart.html');
+        } else {
+            _source = {uri: 'file:///android_asset/ChartHtml/chart.html'};
+        }
+
         return (
             <View style={this.props.style || {flex:1}}>
                 <WebView
                     style={{flex:1}}
                     ref={rnChart => this.rnChart = rnChart}
                     scrollEnabled={false}
-                    source={require('./ChartHtml/chart.html')}
+                    source={ _source }
                     onMessage={(e) => this._onMessage(e)}
                     dataDetectorTypes="none"
                     onLoad={() => this._onLoad()}
