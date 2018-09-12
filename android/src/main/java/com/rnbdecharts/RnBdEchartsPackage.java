@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class RnBdEchartsPackage implements ReactPackage {
 
+    public RnBdEchartsPackage() {}
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
